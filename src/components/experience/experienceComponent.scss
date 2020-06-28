@@ -1,0 +1,44 @@
+$theme-color: #0bceaf;;
+
+.education-item{
+    animation-duration: 0.8s; 
+    animation-delay: 0.3s;
+    animation-name: fadeInUp;
+    box-shadow: 0px 10px 20px 4px #00000015;
+    text-align: left;
+}
+
+p{
+    font-size: unset !important;
+}
+
+.company-name{
+    color: $theme-color;
+}
+
+.work-list{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li{
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 10px;
+        &:before {
+            content: "▹";
+            position: absolute;
+            left: 0px;
+            color:$theme-color;
+            font-size: 25px;
+            
+        }
+    }
+}
+
+.image-container{
+    max-width: 100%;
+    img{
+        height:auto;
+        width: 100%;
+    }
+}

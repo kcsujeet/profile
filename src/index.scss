@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+$theme-color: #0bceaf;
+
+html, body{
+  height: 100% !important;
+  color: rgba(0, 0, 0, 0.65) !important;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: x-large;
+}
+
+
+///animations
+@keyframes fadeInUp{
+  from{transform: translate(0,-100px); opacity: 0;}
+  to{transform: translate(0,0); opacity: 1;}
+}
+
+
+p{
+  font-size: 16px;
+  color: #868e96;
+}
+
+.text-align-left{
+  text-align: left !important;
+}
+
+.text-align-center{
+  text-align: center !important;
+}
+
+.text-bold{
+  font-weight: bold !important;
+}
+
+.ant-divider-horizontal{
+  &:before, &:after{
+    border-top: 1px solid $theme-color !important;
+  }
+}

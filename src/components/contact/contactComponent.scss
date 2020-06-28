@@ -1,0 +1,25 @@
+$theme-color: #0bceaf;;
+
+.contact-icon{
+    margin-top: 24px;
+    text-align: center;
+    width: 120px !important;
+    height: 120px !important;
+    border: 1px solid;
+    border-radius: 50%;
+    line-height: 120px !important;
+    border-color: $theme-color;
+}
+
+.contact-card{
+    box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.09);
+    transition: .2s ease-in;
+    p{
+        color: unset !important;
+        padding: 0;
+        margin: 0;
+    }
+    &:hover{
+        transform: translate(0,-15px);
+    }
+}

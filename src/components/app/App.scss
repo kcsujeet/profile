@@ -1,0 +1,87 @@
+@import '~antd/dist/antd.css';
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
+$theme-color: #0bceaf;
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.d-block{
+  display: block !important;
+}
+
+.justify-center{
+  justify-content: center !important;
+}
+
+.justify-start{
+  justify-content: start !important;
+}
+
+.full-height-column{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* For demo */
+.main-carousel .slick-slide {
+  text-align: center;
+  height: 100vh !important;
+  overflow: hidden;
+  >div{
+    height: 100%;
+    >div{
+      height: 100%;
+    }
+  }
+}
+
+.main-carousel .slick-dots li button {
+  background: $theme-color;
+  opacity: 0.4;
+}
+
+.main-carousel .slick-dots li.slick-active button {
+  opacity: 1;
+  background: $theme-color;
+}
