@@ -3,5 +3,5 @@
 
 <h1>Available Scripts</h1>
 <strong>npm start</strong><br/>
-<strong>npm run deploy</strong> <br>
+<strong>npm run deploy</strong> <br/><br/>
 <p>Drop a star if you liked it.</p>
