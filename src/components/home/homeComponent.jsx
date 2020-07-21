@@ -15,9 +15,9 @@ function Home({id}){
                 <Fade left duration={1500}>
                 <Space direction='vertical' className='text-align-left fadeInRight'>
                     <Divider orientation='left'>
-                        <h1 className="darkTheme">About Me</h1>
+                        <h1>About Me</h1>
                     </Divider>
-                    <p className="darkTheme">Hello! I'm Sujeet, a software engineer based in Kathmandu, Nepal. <br/><br/>
+                    <p >Hello! I'm Sujeet, a software engineer based in Kathmandu, Nepal. <br/><br/>
                         
                         I graduated from Tribhuvan University, IOE, Pulchowk Campus in 2018. My interests lie at web development and deep learning. I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between. <br/><br/>As an individual, I'm a very happy-go-lucky kind of person. I like to meet new people and make new friends. I've keen interest in photography as well. In my spare time, I enjoy riding motorbike and traveling to new places and capturing the moments. <br/><br/>
                         My goal in life is to continue learning new things and grow as an individual every day. Being a huge fan of Elon Musk, whom I consider my role model, I've a dream that one day I'll be able to work for him. 

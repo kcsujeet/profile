@@ -1,23 +1,23 @@
-$theme-color: #1890ff;;
 
 .contact-icon{
     margin-top: 24px;
     text-align: center;
     width: 120px !important;
     height: 120px !important;
-    border: 1px solid;
+    border: 1px solid var(--text);
     border-radius: 50%;
     line-height: 120px !important;
-    border-color: $theme-color;
+    border-color: var(--text);
 }
 
 .contact-card{
     box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.09);
     transition: .2s ease-in;
     margin-bottom: 1rem !important;
+    background: var(--bg) !important;
+    transition: background 500ms ease-in-out, color 1000ms ease-in-out, transform 200ms ease-in-out;
     text-align: center;
     p{
-        color: rgba(0, 0, 0, 0.65) ;
         padding: 0;
         margin: 0;
     }
@@ -35,6 +35,8 @@ $theme-color: #1890ff;;
     border-radius: 50% !important;
     transition: .3s ease-in !important;
     padding: 0 !important;
+    border: 1px solid var(--social-icon-border) !important;
+    box-shadow: 1px 1px 5px var(--light-gray) !important;
     i{
         margin: 0 !important;
         padding: 0 !important;
@@ -48,4 +50,8 @@ $theme-color: #1890ff;;
     margin-bottom: 1rem;
     display: flex !important;
     justify-content: center;
+}
+
+p, h1, h2, h3, h4, h5, h6, li, i{
+    color: var(--text) !important
 }

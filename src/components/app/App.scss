@@ -1,7 +1,6 @@
 @import '~antd/dist/antd.css';
 @import '~@fortawesome/fontawesome-free/css/all.min.css';
 
-$theme-color: #1890ff;
 
 .app-header {
   padding: 0;
@@ -30,4 +29,11 @@ $theme-color: #1890ff;
 
 .full-height-row{
   min-height: calc(100vh - 64px);
+  background-color: var(--bg) !important;
+}
+
+footer{
+  background: var(--bg) !important;
+  color: var(--text) !important;
+  transition: background 500ms ease-in-out, color 1000ms ease-in-out;
 }

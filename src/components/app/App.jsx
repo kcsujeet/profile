@@ -16,13 +16,13 @@ function App() {
       <Header className='app-header'>
         <Navbar/>
       </Header>
-      <Content style={{marginTop: '64px'}} className="darkTheme">
+      <Content style={{marginTop: '64px'}}>
         <Home id="home"/>
         <Skills id="skills"/>
         <Experience id="experience"/>
         <Contact id="contact"/>
       </Content>
-      <Footer className="text-align-center darkTheme">
+      <Footer className="text-align-center">
         © Copyright 2020 Sujeet Kc
       </Footer>
     </Layout>

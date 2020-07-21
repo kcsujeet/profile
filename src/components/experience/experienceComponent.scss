@@ -1,4 +1,3 @@
-$theme-color: #1890ff;;
 
 .education-item{
     animation-duration: 0.8s; 
@@ -9,7 +8,7 @@ $theme-color: #1890ff;;
 }
 
 .company-name{
-    color: $theme-color;
+    color: var(--theme-color);
 }
 
 .work-list{
@@ -24,7 +23,7 @@ $theme-color: #1890ff;;
             content: "▹";
             position: absolute;
             left: 0px;
-            color:$theme-color;
+            color:var(--theme-color);
             font-size: 25px;
             
         }
@@ -37,4 +36,8 @@ $theme-color: #1890ff;;
         height:auto;
         width: 100%;
     }
+}
+
+p, h1, h2, h3, h4, h5, h6, li{
+    color: var(--text) !important
 }

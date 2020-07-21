@@ -19,6 +19,8 @@ function Navbar(){
     }
 
     useEffect(()=>{
+        var saved_theme = localStorage.getItem('kcsujeet_theme')
+        saved_theme === 'lightTheme' ? switchTheme(false) : switchTheme(true)
         setPosition()
         window.addEventListener('resize', setPosition)
         setHomeElement(document.getElementById('home'))
@@ -70,7 +72,9 @@ function Navbar(){
             document.querySelector('g').setAttribute('fill','rgba(0, 0, 0, 0.65)') // fill graphql logo
             var elems = [...document.getElementsByClassName('darkTheme')]
             elems.forEach(element => {
-                element.classList.replace('darkTheme', 'lightTheme')
+                element.classList.remove('darkTheme')
+                element.classList.add('lightTheme')
+                localStorage.setItem('kcsujeet_theme', 'lightTheme')
             });
             
         }else{
@@ -78,7 +82,9 @@ function Navbar(){
             document.querySelector('g').setAttribute('fill','#fff') // fill graphql logo
             var elements = [...document.getElementsByClassName('lightTheme')]
             elements.forEach(element => {
-                element.classList.remove('lightTheme', 'darkTheme')
+                element.classList.remove('lightTheme')
+                element.classList.add('darkTheme')
+                localStorage.setItem('kcsujeet_theme', 'darkTheme')
             });
         }
     }
@@ -98,7 +104,8 @@ function Navbar(){
                 Contact
             </Menu.Item>
             <Menu.Item>
-                <Switch onChange={switchTheme} defaultChecked/>
+                Theme 
+                <Switch onChange={switchTheme} defaultChecked={localStorage.getItem('kcsujeet_theme') === 'darkTheme'} style={{"marginLeft": ".5rem"}}/>
             </Menu.Item>
       </Menu>
     )

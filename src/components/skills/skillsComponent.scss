@@ -12,6 +12,8 @@
 
 .icon-card{
     box-shadow: 1.5px 3px 3px 0 hsla(0, 0%, 0%, 0.1);
+    background: var(--bg) !important;
+    transition: background 500ms ease-in-out, color 1000ms ease-in-out;
 }
 
 .icon-col{
