@@ -1,0 +1,82 @@
+import React from 'react'
+import {Row, Col, Space, Card, Divider} from 'antd'
+import {Fade} from 'react-reveal'
+
+import coderImage from '../../images/coder.png'
+import './skillsComponent.scss'
+import {ReactComponent as GraphqlSvg} from '../../images/GraphQL.svg'
+
+const {Meta} = Card
+
+function Skills({id}){
+    return(
+        <Row id={id} type="flex" className='full-height-row' justify='center' gutter={24}>
+            <Col md={10} lg={10} sm={24} xs={24} className='full-height-column'>
+                <Fade down duration={1500}>
+                    <div className="image-container" style={{padding: '30px'}}>
+                        <img className='coder-image' src={coderImage} alt=""/>
+                    </div>
+                </Fade>
+            </Col>
+
+            <Col md={10} lg={10} sm={20} xs={20} className='full-height-column'>
+                <Fade up duration={1500}>
+                <Space direction='vertical' className='text-align-left'>
+                    <Divider orientation='left'>
+                        <h1 id="skills_section_title" className="darkTheme">What I Do</h1>
+                    </Divider>
+                    <p className='darkTheme'>
+                        I'm proficient in the following technologies.
+                    </p>
+                    <Row gutter={16}>
+                       
+                        <Col className='icon-col' md={6} lg={6} sm={12} xs={12}>
+                            <Card className='icon-card darkTheme text-align-center' hoverable cover={<GraphqlSvg style={{height: '43px'}}/>} style={{paddingTop: '.5rem'}}>
+                                <Meta description={<p className="darkTheme">GraphQL</p>}></Meta>
+                            </Card>
+                        </Col>
+                        <Col className='icon-col' md={6} lg={6} sm={12} xs={12}>
+                            <Card className='icon-card darkTheme text-align-center' hoverable cover={<i className='fab fa-3x fa-react icon-margin-top'></i>}>
+                                <Meta description={<p className="darkTheme">React</p>}></Meta>
+                            </Card>
+                        </Col>
+                                    
+                        <Col className='icon-col' md={6} lg={6} sm={12} xs={12}>
+                            <Card className='icon-card darkTheme text-align-center' hoverable cover={<i className='fab fa-3x fa-angular icon-margin-top'></i>}>
+                                <Meta description={<p className="darkTheme">Angular</p>}></Meta>
+                            </Card>
+                        </Col>
+                        <Col className='icon-col' md={6} lg={6} sm={12} xs={12}>
+                            <Card className='icon-card darkTheme text-align-center' hoverable cover={<i className='fab fa-3x fa-vuejs icon-margin-top'></i>}>
+                                <Meta description={<p className="darkTheme">Vue</p>}></Meta>
+                            </Card>
+                        </Col>
+                        <Col className='icon-col' md={6} lg={6} sm={12} xs={12}>
+                            <Card className='icon-card darkTheme text-align-center' hoverable cover={<i className='fas fa-3x fa-gem icon-margin-top'></i>}>
+                                <Meta description={<p className="darkTheme">ROR</p>}></Meta>
+                            </Card>
+                        </Col>
+                        <Col className='icon-col' md={6} lg={6} sm={12} xs={12}>
+                            <Card className='icon-card darkTheme text-align-center' hoverable cover={<i className='fab fa-3x fa-node-js icon-margin-top'></i>}>
+                                <Meta description={<p className="darkTheme">Nodejs</p>}></Meta>
+                            </Card>
+                        </Col>
+                        <Col className='icon-col' md={6} lg={6} sm={12} xs={12}>
+                            <Card className='icon-card darkTheme text-align-center' hoverable cover={<i className='fab fa-3x fa-js icon-margin-top'></i>}>
+                                <Meta description={<p className="darkTheme">Javascript</p>}></Meta>
+                            </Card>
+                        </Col>
+                        <Col className='icon-col' md={6} lg={6} sm={12} xs={12}>
+                            <Card className='icon-card darkTheme text-align-center' hoverable cover={<i className='fab fa-3x fa-python icon-margin-top'></i>}>
+                                <Meta description={<p className="darkTheme">Python</p>}></Meta>
+                            </Card>
+                        </Col>
+                    </Row>
+                </Space>
+                </Fade>
+            </Col>            
+        </Row>
+    )   
+}
+
+export default Skills

@@ -1,25 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-$theme-color: #0bceaf;
+$theme-color: #1890ff;
 
 html, body{
-  height: 100% !important;
-  color: rgba(0, 0, 0, 0.65) !important;
+  overflow-x: hidden;
 }
 
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif !important;
   font-size: x-large;
+  height: unset !important;
 }
-
-
-///animations
-@keyframes fadeInUp{
-  from{transform: translate(0,-100px); opacity: 0;}
-  to{transform: translate(0,0); opacity: 1;}
-}
-
 
 p{
   font-size: 16px;
@@ -42,4 +34,36 @@ p{
   &:before, &:after{
     border-top: 1px solid $theme-color !important;
   }
+}
+
+.lightTheme{
+  color: rgba(0, 0, 0, 0.65) !important;
+  &.social-icon{
+    background: white !important;
+    border: 1px solid #ddd !important;
+    box-shadow: 1px 1px 5px rgba(186, 186, 186, 0.5) !important;
+    i{
+      color:rgba(0, 0, 0, 0.65) ;
+    }
+  }
+}
+
+.darkTheme{
+    color: #FFF !important;
+    background: #001529 !important;
+    &.social-icon{
+      border: 1px solid #fff !important;
+      i{
+        color: #fff
+      }
+    }
+    .ant-tabs-tabpane{
+      h2, h4, ul{
+        color: #fff !important;
+      }
+
+      ul{
+        background: #001529  !important;
+      }
+    }
 }

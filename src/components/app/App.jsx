@@ -1,38 +1,31 @@
-import React, {createRef, useEffect} from 'react';
-import {Carousel} from 'antd'
+import React from 'react';
+import {Layout} from 'antd'
+
 import Home from '../home/homeComponent'
-import About from '../about /aboutComponent'
+import Skills from '../skills/skillsComponent'
 import Experience from '../experience/experienceComponent'
 import Contact from '../contact/contactComponent'
+import Navbar from '../navbar/navbarComponent'
 
 import './App.scss';
+const {Header, Content, Footer} = Layout
 
 function App() {
-  const carousel = createRef()
-  useEffect(()=>{
-    document.addEventListener('keydown', (e)=>{
-      if(e.keyCode === 38){
-        carousel.current.prev()
-      }else if(e.keyCode === 40){
-        carousel.current.next()
-      }
-    })
-  })
   return (
-    <Carousel className="main-carousel" draggable dotPosition={'right'} vertical verticalSwiping ref={carousel}>
-      <div>
-      <Home/>
-    </div>
-    <div>
-      <About/>
-    </div>
-    <div>
-      <Experience/>
-    </div>
-    <div>
-      <Contact/>
-    </div>
-    </Carousel>
+    <Layout>
+      <Header className='app-header'>
+        <Navbar/>
+      </Header>
+      <Content style={{marginTop: '64px'}} className="darkTheme">
+        <Home id="home"/>
+        <Skills id="skills"/>
+        <Experience id="experience"/>
+        <Contact id="contact"/>
+      </Content>
+      <Footer className="text-align-center darkTheme">
+        © Copyright 2020 Sujeet Kc
+      </Footer>
+    </Layout>
   );
 }
 

@@ -1,5 +1,5 @@
 {
-  "homepage": "http://kcsujeet.com",
+  "homepage": "https://kcsujeet.com",
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
@@ -8,10 +8,11 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-    "antd": "^4.3.5",
+    "antd": "^4.4.0",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-reveal": "^1.2.2",
     "react-scripts": "3.4.1",
     "sass-loader": "^8.0.2"
   },
@@ -19,6 +20,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "predeploy": "npm run build",
     "eject": "react-scripts eject",
     "deploy": "gh-pages -d build"
   },

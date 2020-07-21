@@ -1,44 +1,69 @@
 import React from 'react'
-import {Row, Col,Card, Space, Divider} from 'antd'
+import {Fade} from 'react-reveal'
+import {Row, Col,Card, Space, Divider, Button} from 'antd'
 
 import './contactComponent.scss'
 
 
-function Contact(){
+function Contact({id}){
     return (
-        <Row type="flex" style={{height: '100%'}} justify='center' gutter={24}>
-            <Col md={16} lg={16} sm={20} xs={20} className='full-height-column'>
+        <Row id={id} type="flex" className='full-height-row' justify='center' gutter={24}>
+            <Col md={20} lg={20} sm={20} xs={20} className='full-height-column'>
                 <Space direction='vertical' style={{width: '100%'}}>
                     <Divider orientation='left'>
-                            <h1>Get In Touch</h1>
+                            <h1 className="darkTheme">Get In Touch</h1>
                     </Divider>
-                    <Row gutter={24}>
-                        <Col md={8} lg={8} sm={8} xs={8}>
-                            <Card className='contact-card' cover={<i className="fas fa-2x fa-map-marker-alt contact-icon"></i>}>
-                                <h2><strong>Address</strong></h2>
-                                <p>Kalanki, Kathmandu, Nepal
+                    <Row gutter={24} justify="center">
+                        <Col md={8} lg={8} sm={20} xs={20}>
+                        <Fade down duration={1500}>
+                            <Card className='contact-card darkTheme' cover={<i className="fas fa-2x fa-map-marker-alt contact-icon"></i>}>
+                                <h2 className="darkTheme"><strong>Address</strong></h2>
+                                <p className="darkTheme">Kalnki, Kathmandu, Nepal
                                 </p>
                             </Card>
+                            </Fade>
                         </Col>
-                        <Col md={8} lg={8} sm={8} xs={8}>
-                            <Card className='contact-card' cover={<i className="far fa-2x fa-envelope contact-icon"></i>}>
-                                <h2><strong>Email</strong></h2>
-                                <a href="mailto: sujeetkc45@gmail.com">sujeetkc45@gmail.com</a>
-                            </Card>
-                        </Col>
-                        <Col md={8} lg={8} sm={8} xs={8}>
-                            <Card className='contact-card' cover={<i className="fas fa-2x fa-phone contact-icon"></i>}>
-                                <h2><strong>Phone</strong></h2>
-                                <p>+977-9803593100
+                        <Col md={8} lg={8} sm={20} xs={20}>
+                        <Fade down duration={1500} delay={200}>
+                            <Card className='contact-card darkTheme' cover={<i className="far fa-2x fa-envelope contact-icon"></i>}>
+                                <h2 className="darkTheme"><strong>Email</strong></h2>
+                                <p className="darkTheme">
+                                    sujeetkc45@gmail.com
                                 </p>
                             </Card>
+                            </Fade>
+                        </Col>
+                        <Col md={8} lg={8} sm={20} xs={20}>
+                        <Fade down duration={1500} delay={400}>
+                            <Card className='contact-card darkTheme' cover={<i className="fas fa-2x fa-phone contact-icon"></i>}>
+                                <h2 className="darkTheme"><strong>Phone</strong></h2>
+                                <p className="darkTheme">+977-9803593100
+                                </p>
+                            </Card>
+                            </Fade>
                         </Col>
                     </Row>
-                        <Row type="flex" justify="center">
-                            <a href="linkedin"><i className='fab fa-facebook-square' style={{margin: '0 10px 0 0'}}></i></a>
-                            <a href="linkedin"><i className='fab fa-github' style={{margin: '0 10px 0 10px'}}></i></a>
-                            <a href="linkedin"><i className="fab fa-linkedin" style={{margin: '0 10px 0 10px'}}></i></a>
-                            <a href="linkedin"><i className="fab fa-google" style={{margin: '0 0 0 10px'}}></i></a>
+                        <Row type="flex" justify="center" style={{marginTop: '1rem'}}>
+                            <Col md={3} lg={3} sm={10} xs={10} className='contact-icon-col'>
+                            <Fade down duration={1500} delay={600}>
+                                <Button className="social-icon darkTheme" type='link' target='_blank' href="https://www.facebook.com/sujeet.kc.1"><i className='fab fa-2x fa-facebook-square'></i></Button>
+                            </Fade>
+                            </Col>
+                            <Col md={3} lg={3} sm={10} xs={10}  className='contact-icon-col'>
+                                <Fade down duration={1500} delay={600}>
+                                <Button className="social-icon darkTheme" type='link' target='_blank' href="https://github.com/kcsujeet"><i className='fab fa-2x fa-github'></i></Button>
+                            </Fade>
+                            </Col>
+                            <Col md={3} lg={3} sm={10} xs={10}  className='contact-icon-col'>
+                                <Fade down duration={1500} delay={600}>
+                                <Button className="social-icon darkTheme" type='link' target='_blank' href="https://www.linkedin.com/in/sujeet-kc-994984154/"><i className="fab fa-2x fa-linkedin"></i></Button>
+                            </Fade>
+                            </Col>
+                            <Col md={3} lg={3} sm={10} xs={10}  className='contact-icon-col'>
+                                <Fade down duration={1500} delay={600}>
+                                <Button className="social-icon darkTheme" type='link' target='_blank' href="https://www.instagram.com/kcsujeet/"><i className="fab fa-2x fa-instagram"></i></Button>
+                            </Fade>
+                            </Col>
                         </Row>
                 </Space>
             </Col>
