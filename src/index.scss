@@ -15,28 +15,32 @@
   --theme-color: #1890ff;
   --deep-blue: #001529;
   --light-gray: #6c798370;
+  --low-opacity-deep-blue: rgba(0, 21, 41, 0.85);
+  --low-opacity-gray: rgba(248, 248, 248, 0.85);
 
 }
 
 .lightTheme {
   --bg: var(--gray0);
   --bg-nav: linear-gradient(to right, var(--gray1), var(--gray3));
-  --bg-dropdown: var(--gray0);
+  --bg-dropdown: var(--gray1);
   --text: var(--gray6);
   --border-color: var(--blue);
   --bg-solar: var(--yellow);
   --social-icon-border: none;
-  --box-shadow: var(--light-gray)
+  --box-shadow: var(--light-gray);
+  --bg-mobile-nav: var(--low-opacity-gray);
 }
 
 .darkTheme {
     --bg: var(--deep-blue);
     --bg-nav: linear-gradient(to right, var(--deep-blue), var(--gray6));
-    --bg-dropdown: var(--gray6);
+    --bg-dropdown: var(--gray4);
     --text: var(--gray0);
     --border-color: var(--purple);
     --bg-solar: var(--blue);
     --social-icon-border: var(--gray0);
+    --bg-mobile-nav: var(--low-opacity-deep-blue);
 
 }
 
