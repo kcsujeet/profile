@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react'
 import {Row, Col, Divider, Space, Tabs} from 'antd'
 import {Fade} from 'react-reveal'
+import LazyLoad from 'react-lazyload';
+
 
 import './experienceComponent.scss'
 import teamImage from '../../images/team.png'
@@ -69,7 +71,9 @@ function Experience({id}){
             <Fade left duration={1500}>
 
                 <div className="image-container" style={{padding: '30px'}}>
-                    <img className='coder-image' src={teamImage} alt=""/>
+                    <LazyLoad>
+                        <img className='coder-image' src={teamImage} alt=""/>
+                    </LazyLoad>
                 </div>
                 </Fade>
             </Col>

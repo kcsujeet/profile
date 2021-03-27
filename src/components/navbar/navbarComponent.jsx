@@ -1,12 +1,13 @@
 import React, {useState, useEffect} from 'react'
-import {Button, Switch} from 'antd'
+import {Switch} from 'antd'
+import{FaMoon, FaSun} from 'react-icons/fa'
 
 import './navbarComponent.scss'
 
 function Navbar(){
     const [activeLink, setActiveLink] = useState('about')
-    const [blockPosition, setBlockPosition] = useState('center')
     const [homeElement, setHomeElement] = useState('')
+    const [aboutElement, setaboutElement] = useState('')
     const [skillsElement, setSkillsElement] = useState('')
     const [experienceElement, setExperienceElement] = useState('')
     const [contactElement, setContactElement] = useState('')
@@ -15,44 +16,37 @@ function Navbar(){
         if(window.innerWidth <= 760){
             handleHamburgerClick()
             setTimeout((target) => {
-                const anchor = document.getElementById(`${target.name}`)
-                anchor.scrollIntoView({ behavior: 'smooth', block: blockPosition})
+                scrollTo('#'+target.name)
             }, 1000, event.target);
         }else{
-            const anchor = document.getElementById(`${event.target.name}`)
-            anchor.scrollIntoView({ behavior: 'smooth', block: blockPosition})
+            scrollTo('#'+event.target.name)
         }
         
     }
-    
+
+    const scrollTo = (selector, yOffset = -65)=>{
+        const el = document.querySelector(selector);
+        const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({top: y, behavior: 'smooth'});
+    }
 
     useEffect(()=>{
         var saved_theme = localStorage.getItem('kcsujeet_theme')
         saved_theme === 'lightTheme' ? switchTheme(false) : switchTheme(true)
-        setPosition()
-        window.addEventListener('resize', setPosition)
         setHomeElement(document.getElementById('home'))
+        setaboutElement(document.getElementById('about'))
         setSkillsElement(document.getElementById('skills'))
         setExperienceElement(document.getElementById('experience'))
         setContactElement(document.getElementById('contact'))
-        return () => window.removeEventListener('resize', setPosition);
     },[])
-
-    const setPosition = ()=>{
-        if(window.innerWidth <= 760){
-            setBlockPosition('start')
-        }else{
-            setBlockPosition('center')
-        }
-    }
-
+    
     useEffect(()=>{
         window.addEventListener('scroll', handleSroll, false)
         return () => window.removeEventListener('scroll', handleSroll);
     })
 
     const handleSroll = ()=>{
-        if(isScrolledIntoView(homeElement)){
+        if(isScrolledIntoView(aboutElement)){
             setActiveLink('about')
         }else if(isScrolledIntoView(skillsElement)){
             setActiveLink('skills')
@@ -60,18 +54,23 @@ function Navbar(){
             setActiveLink('experience')
         }else if(isScrolledIntoView(contactElement)){
             setActiveLink('contact')
+        }else if(isScrolledIntoView(homeElement)){
+            setActiveLink('home')
         }
     }
 
     const isScrolledIntoView = (el, percentVisible = 15)=>{
-        let
-        rect = el.getBoundingClientRect(),
-        windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+        if(el){
+
+            let
+            rect = el.getBoundingClientRect(),
+            windowHeight = (window.innerHeight || document.documentElement.clientHeight);
     
-      return !(
-        Math.floor(100 - (((rect.top >= 0 ? 0 : rect.top) / +-(rect.height / 1)) * 100)) < percentVisible ||
-        Math.floor(100 - ((rect.bottom - windowHeight) / rect.height) * 100) < percentVisible
-      )
+            return !(
+                Math.floor(100 - (((rect.top >= 0 ? 0 : rect.top) / +-(rect.height / 1)) * 100)) < percentVisible ||
+                Math.floor(100 - ((rect.bottom - windowHeight) / rect.height) * 100) < percentVisible
+                )
+        }
     }
 
     const switchTheme= (checked)=>{
@@ -86,7 +85,6 @@ function Navbar(){
     }
 
     const handleSwitchTheme =(checked)=>{
-        document.getElementById('theme-dropdown-toggle').blur()
         if(window.innerWidth <= 760){
             handleHamburgerClick() 
         } 
@@ -101,14 +99,17 @@ function Navbar(){
     }
 
     return(
-        <nav className="navbar">
+        <nav className="navbar" id="navbar">
             <div className="hamburger" onClick={handleHamburgerClick}>
                 <div className="hamburger-line"></div>
             </div>
 
             <ul className="navbar-nav">
                 <li className={`nav-item`}>
-                    <a name="home" onClick={handleClick} className={`nav-link ${activeLink === 'about' ? 'active' : ''}`}>About</a>
+                    <a name="home" onClick={handleClick} className={`nav-link ${activeLink === 'home' ? 'active' : ''}`}>Home</a>
+                </li>
+                <li className={`nav-item`}>
+                    <a name="about" onClick={handleClick} className={`nav-link ${activeLink === 'about' ? 'active' : ''}`}>About</a>
                 </li>
                 <li className={`nav-item`}>
                     <a name="skills" onClick={handleClick} className={`nav-link  ${activeLink === 'skills' ? 'active' : ''}`}>Skills</a>
@@ -119,20 +120,12 @@ function Navbar(){
                 <li className={`nav-item `}>
                     <a name="contact" onClick={handleClick} className={`nav-link ${activeLink === 'contact' ? 'active' : ''}`}>Contact</a>
                 </li>
-                <li name="theme" className={"nav-item has-dropdown"}>
-                    <Button id="theme-dropdown-toggle" type="text" className="nav-link">Theme</Button>
-                    <ul className="theme-dropdown">
-                        <li className="theme-option">
-                            <Button type="text" onClick={()=>handleSwitchTheme(false)} id="lightTheme">
-                                <i className="fa fa-circle light-circle" ></i>
-                                Light</Button>
-                        </li>
-                        <li className="theme-option">
-                            <Button type="text"  onClick={()=>handleSwitchTheme(true)} id="DarkTheme">
-                            <i className="fa fa-circle dark-circle" ></i>
-                                Dark</Button>
-                        </li>
-                    </ul>
+                <li name="theme" className={"nav-item"}>
+                    <Switch defaultChecked={localStorage.getItem('kcsujeet_theme') == 'darkTheme'} 
+                            checkedChildren={<FaMoon/>}
+                            unCheckedChildren={<FaSun/>}
+                            onChange={(checked)=>{handleSwitchTheme(checked)}}>
+                    </Switch>
                 </li>
             </ul>
         </nav>

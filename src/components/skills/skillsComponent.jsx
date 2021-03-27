@@ -1,6 +1,8 @@
 import React from 'react'
 import {Row, Col, Space, Card, Divider} from 'antd'
 import {Fade} from 'react-reveal'
+import LazyLoad from 'react-lazyload';
+
 
 import coderImage from '../../images/coder.png'
 import './skillsComponent.scss'
@@ -14,7 +16,9 @@ function Skills({id}){
             <Col md={10} lg={10} sm={24} xs={24} className='full-height-column'>
                 <Fade down duration={1500}>
                     <div className="image-container" style={{padding: '30px'}}>
-                        <img className='coder-image' src={coderImage} alt=""/>
+                        <LazyLoad>
+                            <img className='coder-image' src={coderImage} alt=""/>
+                        </LazyLoad>
                     </div>
                 </Fade>
             </Col>

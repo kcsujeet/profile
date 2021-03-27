@@ -1,0 +1,18 @@
+@keyframes img-outer-border-ripple {
+    from {box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.07)}
+	to {box-shadow: 0 0 0 45px rgba(0, 0, 0, 0)}
+}
+
+.img-fluid{
+    width: 75%;
+    height: auto;
+    filter: url(#duotone_seafoam);
+    &:hover{
+      filter: none
+    }
+}
+
+
+.react-reveal{
+    height: 100% !important
+}

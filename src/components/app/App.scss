@@ -30,6 +30,8 @@
 .full-height-row{
   min-height: calc(100vh - 64px);
   background-color: var(--bg) !important;
+  padding-bottom: 20px;
+  align-items: center;
 }
 
 footer{

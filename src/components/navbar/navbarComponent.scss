@@ -63,47 +63,6 @@
     }
 }
 
-.theme-dropdown{
-    list-style-type: none;
-    border-top: 2px solid var(--theme-color);
-    display: flex;
-    position: absolute;
-    z-index: 2;
-    opacity: 0;
-    justify-content: space-around;
-    align-items: center;
-    height: 3rem;
-    margin-top: 0.5rem;
-    background: var(--bg-dropdown);
-    color: var(--text);
-    width: 300px;
-    padding: 0;
-    transform: translate(-35%);
-    border-bottom-right-radius: 8px;
-    border-bottom-left-radius: 8px;
-    align-items: center;
-    transition: opacity .2s ease-in-out;
-    .theme-option{
-        height: 100%;
-        button {  
-            padding: 1rem;
-            color: var(--text);
-            height: 100%;
-            display: flex;
-            align-items: center;
-            &:hover{
-                color: var(--gray2);
-            }
-        }
-    }
-}
-
-.has-dropdown:focus-within{
-    .theme-dropdown{
-       opacity: 1;
-    }
-}
-
 .light-circle{
     color: var(--gray0) !important;
     font-size: 1.5rem !important;
@@ -160,14 +119,5 @@
                 }
             }
         }
-    }
-
-    .theme-dropdown{
-        transform: translate(-25%);
-    }
-
-    #theme-dropdown-toggle{
-        width: 100%;
-        text-align: center;
     }
 }

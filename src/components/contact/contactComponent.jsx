@@ -18,7 +18,7 @@ function Contact({id}){
                         <Fade down duration={1500}>
                             <Card className='contact-card' cover={<i className="fas fa-2x fa-map-marker-alt contact-icon"></i>}>
                                 <h2 ><strong>Address</strong></h2>
-                                <p >Kalnki, Kathmandu, Nepal
+                                <p >Kalanki, Kathmandu, Nepal
                                 </p>
                             </Card>
                             </Fade>
