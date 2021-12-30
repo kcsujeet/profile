@@ -18,7 +18,7 @@ function Contact({id}){
                         <Fade down duration={1500}>
                             <Card className='contact-card' cover={<i className="fas fa-2x fa-map-marker-alt contact-icon"></i>}>
                                 <h2 ><strong>Address</strong></h2>
-                                <p >Kalanki, Kathmandu, Nepal
+                                <p >Halifax, Canada
                                 </p>
                             </Card>
                             </Fade>
@@ -37,7 +37,7 @@ function Contact({id}){
                         <Fade down duration={1500} delay={400}>
                             <Card className='contact-card ' cover={<i className="fas fa-2x fa-phone contact-icon"></i>}>
                                 <h2 ><strong>Phone</strong></h2>
-                                <p >+977-9803593100
+                                <p >+1-9029893010
                                 </p>
                             </Card>
                             </Fade>

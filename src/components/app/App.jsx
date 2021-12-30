@@ -19,7 +19,6 @@ function App() {
       </Header>
       <Content style={{marginTop: '64px'}}>
         <Home id="home"/>
-        <About id="about"/>
         <Skills id="skills"/>
         <Experience id="experience"/>
         <Contact id="contact"/>

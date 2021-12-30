@@ -5,7 +5,7 @@ import{FaMoon, FaSun} from 'react-icons/fa'
 import './navbarComponent.scss'
 
 function Navbar(){
-    const [activeLink, setActiveLink] = useState('about')
+    const [activeLink, setActiveLink] = useState('home')
     const [homeElement, setHomeElement] = useState('')
     const [aboutElement, setaboutElement] = useState('')
     const [skillsElement, setSkillsElement] = useState('')
@@ -107,9 +107,6 @@ function Navbar(){
             <ul className="navbar-nav">
                 <li className={`nav-item`}>
                     <a name="home" onClick={handleClick} className={`nav-link ${activeLink === 'home' ? 'active' : ''}`}>Home</a>
-                </li>
-                <li className={`nav-item`}>
-                    <a name="about" onClick={handleClick} className={`nav-link ${activeLink === 'about' ? 'active' : ''}`}>About</a>
                 </li>
                 <li className={`nav-item`}>
                     <a name="skills" onClick={handleClick} className={`nav-link  ${activeLink === 'skills' ? 'active' : ''}`}>Skills</a>

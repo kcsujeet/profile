@@ -33,9 +33,25 @@ function Experience({id}){
                         <h1 id="experienceHeader" >Where I've Worked</h1>
                     </Divider>
                     <Tabs defaultActiveKey="1" tabPosition={tabsPosition}>
-                        <TabPane tab={<p >Tekvortex</p>} key={1}>
+                        <TabPane tab={<p >Legalfit</p>} key={1}>
+                            <h2>Front End Developer <span className='company-name'>@ Legalfit</span></h2>
+                            <h4>September 2021 - Present</h4>
+                            <ul className='work-list'>
+                                <li>
+                                    Develop and maintain in-house software solutions
+                                </li>
+                                <li>
+                                    Communicate with manager and provide valuable propositions
+                                </li>
+                                <li>
+                                    Review code and provide feedback for junior team members
+                                </li>
+                               
+                            </ul>
+                        </TabPane>
+                        <TabPane tab={<p >Tekvortex</p>} key={2}>
                             <h2>Software Engineer <span className='company-name'>@ Tekvortex</span></h2>
-                            <h4>February 2020 - Present</h4>
+                            <h4>February 2020 - September 2021</h4>
                             <ul className='work-list'>
                                 <li>Write modern, performant, maintainable code</li>
                                 <li>
@@ -44,8 +60,8 @@ function Experience({id}){
                                 <li>Mentor new recruits and help them understand the work environment</li>
                             </ul>
                         </TabPane>
-                        <TabPane tab={<p >Tekvortex</p>} key={2}>
-                            <h2>Assocaite Software Engineer <span className='company-name'>@ Tekvortex</span></h2>
+                        <TabPane tab={<p >Tekvortex</p>} key={3}>
+                            <h2>Associate Software Engineer <span className='company-name'>@ Tekvortex</span></h2>
                             <h4>February 2019 - February 2020</h4>
                             <ul className='work-list'>
                                 <li>Work in agile approach with a team of engineers</li>
@@ -53,7 +69,7 @@ function Experience({id}){
                                 <li>Ensure deliverables adhere to in-house processes and regulatory requirements</li>
                             </ul>
                         </TabPane>
-                        <TabPane tab={<p >Qubit</p>} key={3}>
+                        <TabPane tab={<p >Qubit</p>} key={4}>
                             <h2>Python Developer <span className='company-name'>@ Qubit</span></h2>
                             <h4>September 2018 - February 2019</h4>
                             <ul className='work-list'>

@@ -83,7 +83,8 @@ h1{
 }
 
 .big-heading {
- font-size: clamp(40px, 10vw, 100px) !important
+ font-size: clamp(30px, 8vw, 80px) !important;
+ margin: 0 !important;
 }
 
 .text-align-center{
