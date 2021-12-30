@@ -7,7 +7,6 @@ import './navbarComponent.scss'
 function Navbar(){
     const [activeLink, setActiveLink] = useState('home')
     const [homeElement, setHomeElement] = useState('')
-    const [aboutElement, setaboutElement] = useState('')
     const [skillsElement, setSkillsElement] = useState('')
     const [experienceElement, setExperienceElement] = useState('')
     const [contactElement, setContactElement] = useState('')
@@ -34,7 +33,6 @@ function Navbar(){
         var saved_theme = localStorage.getItem('kcsujeet_theme')
         saved_theme === 'lightTheme' ? switchTheme(false) : switchTheme(true)
         setHomeElement(document.getElementById('home'))
-        setaboutElement(document.getElementById('about'))
         setSkillsElement(document.getElementById('skills'))
         setExperienceElement(document.getElementById('experience'))
         setContactElement(document.getElementById('contact'))
@@ -46,9 +44,7 @@ function Navbar(){
     })
 
     const handleSroll = ()=>{
-        if(isScrolledIntoView(aboutElement)){
-            setActiveLink('about')
-        }else if(isScrolledIntoView(skillsElement)){
+        if(isScrolledIntoView(skillsElement)){
             setActiveLink('skills')
         }else if(isScrolledIntoView(experienceElement)){
             setActiveLink('experience')

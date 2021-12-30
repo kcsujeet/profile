@@ -2,7 +2,6 @@ import React from 'react';
 import {Layout} from 'antd'
 
 import Home from '../home/homeComponent'
-import About from '../about/aboutComponent'
 import Skills from '../skills/skillsComponent'
 import Experience from '../experience/experienceComponent'
 import Contact from '../contact/contactComponent'
