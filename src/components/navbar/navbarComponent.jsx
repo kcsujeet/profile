@@ -114,7 +114,7 @@ function Navbar(){
                     <a name="contact" onClick={handleClick} className={`nav-link ${activeLink === 'contact' ? 'active' : ''}`}>Contact</a>
                 </li>
                 <li name="theme" className={"nav-item"}>
-                    <Switch defaultChecked={localStorage.getItem('kcsujeet_theme') == 'darkTheme'} 
+                    <Switch defaultChecked={localStorage.getItem('kcsujeet_theme') === 'darkTheme'} 
                             checkedChildren={<FaMoon/>}
                             unCheckedChildren={<FaSun/>}
                             onChange={(checked)=>{handleSwitchTheme(checked)}}>
