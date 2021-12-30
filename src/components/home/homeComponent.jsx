@@ -27,8 +27,7 @@ function Home({id}){
                     <Fade duration={1500} delay={1000}>
                         <Title>I am Sujeet.</Title>
                         <p>
-                        A software engineer based in Halifax, Canada.
-                        I graduated from Tribhuvan University, IOE, Pulchowk Campus in 2018. My interests lie at web development and cloud computing. 
+                        A software engineer based in Halifax, Canada specializing in web development and cloud computing. 
                         </p>
                     </Fade>
 
