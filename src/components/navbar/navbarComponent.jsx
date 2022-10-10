@@ -102,16 +102,16 @@ function Navbar(){
 
             <ul className="navbar-nav">
                 <li className={`nav-item`}>
-                    <a name="home" onClick={handleClick} className={`nav-link ${activeLink === 'home' ? 'active' : ''}`}>Home</a>
+                    <a href name="home" onClick={handleClick} className={`nav-link ${activeLink === 'home' ? 'active' : ''}`}>Home</a>
                 </li>
                 <li className={`nav-item`}>
-                    <a name="skills" onClick={handleClick} className={`nav-link  ${activeLink === 'skills' ? 'active' : ''}`}>Skills</a>
+                    <a href name="skills" onClick={handleClick} className={`nav-link  ${activeLink === 'skills' ? 'active' : ''}`}>Skills</a>
                 </li>
                 <li className={`nav-item `}>
-                    <a name="experience" onClick={handleClick} className={`nav-link ${activeLink === 'experience' ? 'active' : ''}`}>Experience</a>
+                    <a href name="experience" onClick={handleClick} className={`nav-link ${activeLink === 'experience' ? 'active' : ''}`}>Experience</a>
                 </li>
                 <li className={`nav-item `}>
-                    <a name="contact" onClick={handleClick} className={`nav-link ${activeLink === 'contact' ? 'active' : ''}`}>Contact</a>
+                    <a href name="contact" onClick={handleClick} className={`nav-link ${activeLink === 'contact' ? 'active' : ''}`}>Contact</a>
                 </li>
                 <li name="theme" className={"nav-item"}>
                     <Switch defaultChecked={localStorage.getItem('kcsujeet_theme') === 'darkTheme'} 
