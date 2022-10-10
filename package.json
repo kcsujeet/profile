@@ -1,5 +1,5 @@
 {
-  "homepage": "https://kcsujeet.com",
+  "homepage": "https://kcsujeet.com.np",
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
@@ -9,6 +9,7 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "antd": "^4.4.0",
+    "gh-pages": "^4.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-icons": "^4.2.0",
