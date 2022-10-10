@@ -67,7 +67,7 @@ function Home({id}){
                 <Fade right duration={1500} className="h-100">
                 <Space direction="vertical" className="text-align-center fadeInLeft h-100">
                     <LazyLoad>
-                        <img className="img-fluid" src={myImage}/>
+                        <img alt="Sujeet Kc" className="img-fluid" src={myImage}/>
                     </LazyLoad>
                 </Space>
                 </Fade>
