@@ -46,24 +46,7 @@ function Home({id}){
                 </Space>
             </Col>
             <Col md={10} lg={10} sm={20} xs={20} className="full-height-column">
-                <svg style={{width: 0, height: 0}}>
-                <filter id="duotone_seafoam">
-                    <feColorMatrix type="matrix" result="gray"
-                        values="1 0 0 0 0
-                                1 0 0 0 0
-                                1 0 0 0 0
-                                0 0 0 1 0" >
-                    </feColorMatrix>
 
-                    <feComponentTransfer colorInterpolationFilters="sRGB" result="duotone">
-                        <feFuncR type="table" tableValues="0 0.1647058824"></feFuncR>
-                        <feFuncG type="table" tableValues="0.1411764706 0.6588235294"></feFuncG>
-                        <feFuncB type="table" tableValues="0.2117647059 0.5490196078"></feFuncB>
-                        <feFuncA type="table" tableValues="0 1"></feFuncA>
-                    </feComponentTransfer>
-                </filter>
-                </svg>
-            
                 <Fade right duration={1500} className="h-100">
                 <Space direction="vertical" className="text-align-center fadeInLeft h-100">
                     <LazyLoad>

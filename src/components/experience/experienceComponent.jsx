@@ -69,15 +69,6 @@ function Experience({id}){
                                 <li>Ensure deliverables adhere to in-house processes and regulatory requirements</li>
                             </ul>
                         </TabPane>
-                        <TabPane tab={<p >Qubit</p>} key={4}>
-                            <h2>Python Developer <span className='company-name'>@ Qubit</span></h2>
-                            <h4>September 2018 - February 2019</h4>
-                            <ul className='work-list'>
-                                <li>Develop modern web applications for clients</li>
-                                <li>Present end-to-end demonstrations of the products to clients </li>
-                                <li>Investigated best practices on in the software development scenario</li>
-                            </ul>
-                        </TabPane>
                     </Tabs>
                  </Fade>
                  </Space>

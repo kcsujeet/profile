@@ -23,7 +23,7 @@ function App() {
         <Contact id="contact"/>
       </Content>
       <Footer className="text-align-center">
-        © Copyright 2021 Sujeet Kc
+        © Copyright {new Date().getFullYear()} Sujeet Kc
       </Footer>
     </Layout>
   );
