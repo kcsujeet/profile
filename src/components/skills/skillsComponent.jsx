@@ -6,7 +6,6 @@ import LazyLoad from 'react-lazyload';
 
 import coderImage from '../../images/coder.png'
 import './skillsComponent.scss'
-import {ReactComponent as GraphqlSvg} from '../../images/GraphQL.svg'
 
 const {Meta} = Card
 
