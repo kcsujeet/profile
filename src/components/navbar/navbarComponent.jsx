@@ -87,6 +87,11 @@ function Navbar(){
        switchTheme(checked)
     }
 
+    const switchStatus = () => {
+        const storedStatus = localStorage.getItem('kcsujeet_theme')
+        return !storedStatus || storedStatus === 'darkTheme'
+    }
+
     const handleHamburgerClick = ()=>{
         var nav = document.querySelector('.navbar-nav')
         var hamburger = document.querySelector('.hamburger')
@@ -114,7 +119,7 @@ function Navbar(){
                     <a href name="contact" onClick={handleClick} className={`nav-link ${activeLink === 'contact' ? 'active' : ''}`}>Contact</a>
                 </li>
                 <li name="theme" className={"nav-item"}>
-                    <Switch defaultChecked={localStorage.getItem('kcsujeet_theme') === 'darkTheme'} 
+                    <Switch defaultChecked={ switchStatus() }
                             checkedChildren={<FaMoon/>}
                             unCheckedChildren={<FaSun/>}
                             onChange={(checked)=>{handleSwitchTheme(checked)}}>
