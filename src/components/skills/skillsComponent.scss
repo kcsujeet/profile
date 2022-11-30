@@ -19,3 +19,21 @@
 .icon-col{
     margin-bottom: 1rem;
 }
+
+
+.ant-card-meta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ant-card-body {
+    padding: .5rem 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ant-card {
+    padding: 1rem !important;
+}
