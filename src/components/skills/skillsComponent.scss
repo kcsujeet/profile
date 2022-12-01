@@ -1,39 +1,40 @@
-.image-container{
-    max-width: 100%;
-    img{
-        height:auto;
-        width: 100%;
+.skills-component {
+    .image-container {
+        max-width: 100%;
+        img {
+            height: auto;
+            width: 100%;
+        }
     }
-}
 
-.icon-margin-top{
-    margin-top: .5rem !important;
-}
+    .icon-margin-top {
+        margin-top: 0.5rem !important;
+    }
 
-.icon-card{
-    box-shadow: 1.5px 3px 3px 0 hsla(0, 0%, 0%, 0.1);
-    background: var(--bg) !important;
-    transition: background 500ms ease-in-out, color 1000ms ease-in-out;
-}
+    .icon-card {
+        box-shadow: 1.5px 3px 3px 0 hsla(0, 0%, 0%, 0.1);
+        background: var(--bg) !important;
+        transition: background 500ms ease-in-out, color 1000ms ease-in-out;
+    }
 
-.icon-col{
-    margin-bottom: 1rem;
-}
+    .icon-col {
+        margin-bottom: 1rem;
+    }
 
+    .ant-card-meta {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-.ant-card-meta {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    .ant-card-body {
+        padding: 0.5rem 0 !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-.ant-card-body {
-    padding: .5rem 0 !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.ant-card {
-    padding: 1rem !important;
+    .ant-card {
+        padding: 1rem !important;
+    }
 }

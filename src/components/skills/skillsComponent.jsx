@@ -11,7 +11,7 @@ const {Meta} = Card
 
 function Skills({id}){
     return(
-        <Row id={id} type="flex" className='full-height-row' justify='center' gutter={24}>
+        <Row id={id} type="flex" className='full-height-row skills-component' justify='center' gutter={24}>
             <Col md={10} lg={10} sm={24} xs={24} className='full-height-column'>
                 <Fade down duration={1500}>
                     <div className="image-container" style={{padding: '30px'}}>
