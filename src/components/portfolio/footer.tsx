@@ -7,17 +7,19 @@ export function Footer() {
         <div className="grid md:grid-cols-2 gap-8 items-center">
           {/* Left - Branding */}
           <div>
-            <div className="flex items-center gap-2 mb-2">
+            <div className="flex items-center gap-2 mb-2 justify-center md:justify-start">
               <Terminal className="w-5 h-5 text-emerald-400" />
               <span className="font-mono text-lg font-bold text-emerald-400">
-                SK
+                SKC
               </span>
             </div>
-            <p className="text-sm text-gray-400">Full-Stack Engineer</p>
+            <p className="text-sm text-gray-400 text-center md:text-left">
+              Full-Stack Engineer
+            </p>
           </div>
 
           {/* Center - Copyright */}
-          <div className="text-right">
+          <div className="text-center md:text-right">
             <p className="font-mono text-sm text-gray-400">
               © {new Date().getFullYear()} All rights reserved
             </p>

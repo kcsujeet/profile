@@ -56,6 +56,7 @@ export function AboutSection() {
               "Vue.js",
               "Tailwind CSS",
               "Ruby on Rails",
+              "Node.js",
               "PostgreSQL",
             ].map((skill) => (
               <div

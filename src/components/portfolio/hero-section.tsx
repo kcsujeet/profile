@@ -1,18 +1,10 @@
-import {
-  Dot,
-  Github,
-  Linkedin,
-  Mail,
-  MapPin,
-  Phone,
-  Terminal,
-} from "lucide-react";
+import { Dot } from "lucide-react";
 
 export function HeroSection() {
   return (
     <section
-      id="hero"
-      className="min-h-screen flex items-center justify-center relative p-8"
+      id="home"
+      className="min-h-screen flex items-center justify-center relative p-8 pt-20"
     >
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl opacity-40" />
@@ -21,12 +13,6 @@ export function HeroSection() {
 
       <div className="relative z-10 max-w-6xl mx-auto">
         <div className="mb-8">
-          <div className="flex items-center gap-2 mb-4">
-            <Terminal className="w-4 h-4 text-emerald-400" />
-            <span className="font-mono text-sm text-emerald-400">
-              ~/sujeet-kc
-            </span>
-          </div>
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold leading-none">
             <span className="block text-gray-100">SUJEET</span>
             <span className="block text-emerald-400 ml-8 md:ml-16">KC</span>

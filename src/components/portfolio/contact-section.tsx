@@ -36,7 +36,7 @@ export function ContactSection() {
         </div>
 
         {/* Mobile Social Links */}
-        <div className="flex justify-center gap-6 mb-16 lg:hidden">
+        <div className="flex mt-6 justify-center gap-6 mb-16 lg:hidden">
           <SocialMediaLinks />
         </div>
       </div>
