@@ -9,6 +9,8 @@ const projects = [
     tech: ["React", "TypeScript", "Framer Motion"],
     year: "2025",
     status: "Live",
+    code: null,
+    live: "https://gajjabko-calendar.pages.dev",
   },
   {
     name: "Passport Photo Wiz",
@@ -17,6 +19,8 @@ const projects = [
     tech: ["React", "TypeScript", "Canvas API"],
     year: "2024",
     status: "Live",
+    code: null,
+    live: "https://passportphotowiz.com",
   },
   {
     name: "Sl Vue Tree Next",
@@ -24,6 +28,8 @@ const projects = [
     tech: ["Vue3", "TypeScript", "NPM"],
     year: "2024",
     status: "Open Source",
+    code: "https://github.com/kcsujeet/sl-vue-tree-next",
+    live: null,
   },
 ];
 
@@ -80,26 +86,36 @@ export function ProjectsSection() {
               </div>
 
               <div className="flex gap-4">
-                <div className="hover:scale-105 transform transition-transform">
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    className="border-emerald-500 text-emerald-500 hover:bg-emerald-500 hover:text-black font-semibold p-0 bg-transparent"
-                  >
-                    <Github className="w-4 h-4 mr-2" />
-                    Code
-                  </Button>
-                </div>
-                <div className="hover:scale-105 transform transition-transform">
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    className="border-emerald-500 text-emerald-500 hover:bg-emerald-500 hover:text-black font-semibold p-0 bg-transparent"
-                  >
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    Live
-                  </Button>
-                </div>
+                {project.code && (
+                  <div className="hover:scale-105 transform transition-transform">
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      asChild
+                      className="border-emerald-500 text-emerald-500 hover:bg-emerald-500 hover:text-black font-semibold p-0 bg-transparent"
+                    >
+                      <a href={project.code} target="_blank">
+                        <Github className="w-4 h-4 mr-2" />
+                        Code
+                      </a>
+                    </Button>
+                  </div>
+                )}
+                {project.live && (
+                  <div className="hover:scale-105 transform transition-transform">
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      asChild
+                      className="border-emerald-500 text-emerald-500 hover:bg-emerald-500 hover:text-black font-semibold p-0 bg-transparent"
+                    >
+                      <a href={project.live} target="_blank">
+                        <ExternalLink className="w-4 h-4 mr-2" />
+                        Live
+                      </a>
+                    </Button>
+                  </div>
+                )}
               </div>
             </div>
           ))}
