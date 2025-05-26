@@ -25,8 +25,8 @@ export function AboutSection() {
 
             <p>
               When I'm not coding, you'll find me on a trek to the himalayas,
-              taking photos with my camera, or enjoying a good cup of ginger
-              tea with friends and family.
+              taking photos with my camera, or enjoying a good cup of ginger tea
+              with friends and family.
             </p>
           </div>
 
@@ -47,7 +47,7 @@ export function AboutSection() {
         </div>
 
         <div className="relative">
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
             {[
               "TypeScript",
               "React.js",
