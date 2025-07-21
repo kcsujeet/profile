@@ -3,21 +3,21 @@ import { Button } from "@/components/ui/button";
 import { ArrowUpRight, Code2, ExternalLink, Github } from "lucide-react";
 const projects = [
   {
-    name: "Gajjabko Calendar",
+    name: "ilamy Calendar",
     description:
-      "Customizable React calendar library with Framer Motion animations",
-    tech: ["React", "TypeScript", "Framer Motion"],
-    year: "2025",
+      "React-first, customizable, and feature-rich calendar library.",
+    tech: ["React", "Shadcn", "Tailwind CSS", "TypeScript", "Framer Motion", "Bun"],
+    year: "Jul, 2025",
     status: "Live",
     code: null,
-    live: "https://gajjabko-calendar.pages.dev",
+    live: "https://ilamy.dev",
   },
   {
     name: "Passport Photo Wiz",
     description:
       "Web app for creating compliant passport photos with background removal",
     tech: ["React", "TypeScript", "Canvas API"],
-    year: "2024",
+    year: "Apr, 2025",
     status: "Live",
     code: null,
     live: "https://passportphotowiz.com",
@@ -26,7 +26,7 @@ const projects = [
     name: "Sl Vue Tree Next",
     description: "Vue 3 compatible tree component library published to npm",
     tech: ["Vue3", "TypeScript", "NPM"],
-    year: "2024",
+    year: "Feb, 2024",
     status: "Open Source",
     code: "https://github.com/kcsujeet/sl-vue-tree-next",
     live: null,
